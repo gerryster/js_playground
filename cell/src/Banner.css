@@ -1,0 +1,4 @@
+.Banner{background-color:#efefef;border-bottom:1px solid #ddd;padding:10px 5px 10px 5px;}
+.Banner .title{display:inline-block;width:120px;text-align:center;font-size:18px;line-height:10px;font-variant:small-caps}
+.Banner input.searchInput{border:none;-moz-border-radius-topleft:2px;-moz-border-radius-topright:2px;-moz-border-radius-bottomright:2px;-moz-border-radius-bottomleft:2px;border-top-left-radius:2px;border-top-right-radius:2px;border-bottom-right-radius:2px;border-bottom-left-radius:2px;font-size:14px;padding:4px 6px 4px;margin:0 0 0 10px;outline:none;width:50%}
+.Banner .searchButton{margin:0 0 0 5px;color:#666}
