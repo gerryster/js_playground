@@ -1,11 +1,9 @@
 Azorian: prototype implementation using Cell
 ============================================
 
-Getting Started
-===============
 
-Linux / Mac OS X
-----------------
+Getting Started on Linux / Mac OS X
+-----------------------------------
 
 ### [Installing node.js and NPM](https://github.com/joyent/node/wiki/Installation)
 
@@ -32,9 +30,9 @@ File changes will **automatically** be recompiled.
 
 In a browser, visit `http://localhost:3000/index-dev.html`.  
 
-#### Why a development server?
+##### Why a development server?
 
-**It's JUST for live.js and Chrome**. live.js uses XHR to automatically reload JavaScript and CSS, Chrome does not allow XHR over the `file://` protocol ([issue 41024](http://code.google.com/p/chromium/issues/detail?id=41024)).
+> *It's JUST for live.js and Chrome*. live.js uses XHR to automatically reload JavaScript and CSS, Chrome does not allow XHR over the `file://` protocol ([issue 41024](http://code.google.com/p/chromium/issues/detail?id=41024)).
 
 ### Edit Stylus/CoffeeScript like a Pro
 
@@ -54,10 +52,10 @@ No need to `Alt-Tab` and `F5`. Cool, yah?
 Thank you [live.js](http://livejs.com/)!
 
 
-Windows
--------
+Getting Started on Windows
+--------------------------
 
-Haven't tried, but should work with Node v5.X
+Haven't tried, but should work with Node v5.X with the same steps above...
 
 
 Credit
