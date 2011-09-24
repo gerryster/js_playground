@@ -58,13 +58,16 @@
 
             // We use titleNoFormatting so that no HTML tags are left in the
             // title
-            title.innerHTML = result.titleNoFormatting + " site url: " + result.originalContextUrl;
+            title.innerHTML = result.titleNoFormatting
             var newImg = document.createElement('img');
 
-            // There is also a result.url property which has the escaped version
+            var link = document.createElement('a');
+            link.href=result.originalContextUrl;
             newImg.src = result.tbUrl;
+            link.appendChild(newImg)
+
             imgContainer.appendChild(title);
-            imgContainer.appendChild(newImg);
+            imgContainer.appendChild(link);
 
             // Put our title + image in the content
             contentDiv.appendChild(imgContainer);
