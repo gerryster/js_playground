@@ -5,7 +5,7 @@ coffee = node_modules/.bin/coffee
 serve= node_modules/.bin/serve
 stylus = node_modules/.bin/stylus
 uglifyjs = node_modules/.bin/uglifyjs
-express = node_modules/express/package.json
+connect = node_modules/connect/package.json
 requirejsBuild = ./vendor/requirejs/r.js
 
 #===================================================================
@@ -38,8 +38,8 @@ specs:
 #-------------------------------------------------------------------
 # DEV 
 #------------------------------------------------------------------- 
-dev-server: $(serve)
-	$(serve) -D -L -I `pwd`
+dev-server: $(coffee) $(connect) dev-server.coffee
+	$(coffee) ./dev-server.coffee `pwd`
 
 dev-stylus: $(stylus)
 	find ./src ./mixins -name '*.styl' -type f | xargs $(stylus) --watch --compress
@@ -56,18 +56,11 @@ $(stylus):
 $(coffee):
 	npm install coffee-script
 
-$(express):
-	npm install express
+$(connect):
+	npm install connect
 
 $(uglifyjs):
 	npm install uglify-js
-
-$(serve):
-	npm install serve
-
-#-------------------------------------------------------------------
-# TEST
-#------------------------------------------------------------------- 
 
 clean: 
 	@@rm src/bootstrap.*
