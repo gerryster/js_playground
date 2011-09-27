@@ -17,7 +17,7 @@ define(['Bus'], function(Bus) {
               _results = [];
               for (_i = 0, _len = _ref.length; _i < _len; _i++) {
                 r = _ref[_i];
-                _results.push(this.$el.append(_("<img src='" + r.tbUrl + "'>")));
+                _results.push(this.$el.append(_("<a href='" + r.originalContextUrl + "' target='_blank'><img src='" + r.tbUrl + "'></a>")));
               }
               return _results;
             }, this));

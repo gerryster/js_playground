@@ -1,6 +1,6 @@
 define ['Bus'], (Bus)->
   _ = cell::$R # Cell render helper
-  
+
   afterRender: ->
     Bus.bindAndCall 'change:searchTerm': ({cur:searchTerm})=>
 
@@ -12,6 +12,7 @@ define ['Bus'], (Bus)->
           @$el.html ''
           # Render each result to an <img> tag
           for r in isearch.results
-            @$el.append _ "<img src='#{r.tbUrl}'>"
-            
+            # rgerry question - what does "@$el" mean?
+            @$el.append _ "<a href='#{r.originalContextUrl}' target='_blank'><img src='#{r.tbUrl}'></a>"
+
         isearch.execute searchTerm
