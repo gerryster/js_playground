@@ -10,6 +10,7 @@ define(['Bus'], function(Bus) {
           searchTerm = _arg.cur;
           if (searchTerm) {
             isearch = new google.search.ImageSearch();
+            isearch.setResultSetSize(8);
             isearch.setSearchCompleteCallback(this, __bind(function() {
               var r, _i, _len, _ref, _results;
               this.$el.html('');
