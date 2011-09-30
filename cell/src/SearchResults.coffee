@@ -6,7 +6,7 @@ define ['Bus'], (Bus)->
 
       if searchTerm
         isearch = new google.search.ImageSearch()
-        isearch.setResultSetSize(8)
+        isearch.setResultSetSize(8) # sadly eight is the max Google allows
 
         isearch.setSearchCompleteCallback this, =>
           #Clear previous results
